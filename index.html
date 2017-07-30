@@ -26,30 +26,47 @@
 <script type="text/javascript" src="scripts/jquery.easing-1.3.pack.js"></script>
 <script type="text/javascript" src="scripts/jquery.mousewheel-3.0.4.pack.js"></script>
 <link rel="stylesheet" href="css/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+<script type="text/javascript">
+function MM_validateForm() { //v4.0
+  if (document.getElementById){
+    var i,p,q,nm,test,num,min,max,errors='',args=MM_validateForm.arguments;
+    for (i=0; i<(args.length-2); i+=3) { test=args[i+2]; val=document.getElementById(args[i]);
+      if (val) { nm=val.name; if ((val=val.value)!="") {
+        if (test.indexOf('isEmail')!=-1) { p=val.indexOf('@');
+          if (p<1 || p==(val.length-1)) errors+='- '+nm+' must contain an e-mail address.\n';
+        } else if (test!='R') { num = parseFloat(val);
+          if (isNaN(val)) errors+='- '+nm+' must contain a number.\n';
+          if (test.indexOf('inRange') != -1) { p=test.indexOf(':');
+            min=test.substring(8,p); max=test.substring(p+1);
+            if (num<min || max<num) errors+='- '+nm+' must contain a number between '+min+' and '+max+'.\n';
+      } } } else if (test.charAt(0) == 'R') errors += '- '+nm+' is required.\n'; }
+    } if (errors) alert('We are sorry, but there is an error:\n'+errors);
+    document.MM_returnValue = (errors == '');
+} }
+</script>
 </head>
 <body>
 <!--This is the START of the header-->
-<div id="topcontrol" style="position: fixed; bottom: 5px; left: 960px; opacity: 1; cursor: pointer;" title="Go to Top"></div>
+<div id="topcontrol" style="position: static; bottom: 5px; left: 960px; opacity: 1; cursor: pointer;" title="Go to Top"></div>
 <div id="header-wrapper">
 	<div id="header">
 		<div id="logo"> <a href="index.html"><img src="images/about/thumbs/me.png" width="140" height="150" alt="logo" align = "left" /></a> </div>
 		<div id="header-text">
 			<h2>Prasanna Purushottam Joshi</h2>
-			<h4>Data Scientist, Apptopia Inc.</h4>
 			<h6><a href="index.html">Home</a></h6>
 		</div>
 	</div>
 </div>
 <!--END of header-->
 <!--This is the START of the menu-->
-<div id="menu-wrapper">
+<div id="menu-wrapper" style="position: static;">
 	<div id="main-menu">
 		<ul>
-			<li><a class="selected" href="index.html">Home →</a></li>
-			<li><a href="about.html">About</a></li>
-			<li><a href="portfolio.html">Portfolio</a></li>
-			<li><a href="blog.html">Blog</a></li>
-			<li><a href="contact.html">Contact</a></li>
+			<li><a class="selected" href="index.html#content">Home →</a></li>
+			<li><a href="index.html#timeline">About</a></li>
+			<li><a href="index.html#content">Portfolio</a></li>
+			<li><a href="index.html#content">Blog</a></li>
+			<li><a href="index.html#contactinfo">Contact</a></li>
 		</ul>
 	</div>
 	<!--This is the START of the footer-->
@@ -64,58 +81,142 @@
 		</div>
 		
 	</div>
-	<!--END of footer-->
-	
+	<!--END of footer-->	
 </div>
+
 <!--END of menu-->
 <!--This is the START of the content-->
-	
 <div id="content">
 <h2>Welcome!</h2> 
-
                 <p style="font-size:15px"> I am a mathematical optimization enthusiast with 5+ years of industrial experience in Data Science, Supply Chain Management and Lean Process Optimization. I completed my Master's in Operations Research from Northeastern University. Over the last 6 years I've worked in 6 different industries including manufacturing, automobile, investment research, pharmaceutical and data science.</p>
 
                 <p style="font-size:15px">Currently, I work as a Data Scientist with <a href="http://apptopia.com/" target="_blank">Apptopia</a></p>
 
 				<div class="spacer"></div>
-				<p class = "text-muted"> Copyright Prasanna Joshi, 2017. All rights reserved.</p>   
-
-			</div>
-		</div>
-
-
-	<!--div id="recent-text">
-		<div class="container marketing">
-				<div class="row">
-					<div class="col-md-12">
-		                <p class="lead">I am a mathematical optimization enthusiast with 5+ years of industrial experience in Data Science, Supply Chain Management and Lean Process Optimization.</p>
-		                <p class="lead">Currently, I am working as a Data Scientist at <a href="http://apptopia.com/" target="_blank">Apptopia</a></p>
-					</div>
-				</div>
-
-	</div>
-	
-
-	<!--END of NIVO Slider-->
-
-			<!--END of content--> 	
-		</div>
-	</div>
 </div>
 <!--END of content-->
+<div id="timeline">  
+	  <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1lkJh-npDMudFwIz0aP-2mmjw3NhazK5lWZR4y2jKDNo&font=Default&lang=en&initial_zoom=0&height=450' width='80%' height='500' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0', align="right"></iframe>
+<!--END of content-->    
 </div>
+<div class="spacer"></div>
+
+<div id="content">
+  <!--This is the START of the portfolio section-->
+  <div id="recent-text">
+      <h2>These are some of my latest projects</h2>
+      <div class="star-divider"></div>
+      <h5>You can check them out on my github page</h5>
+      <div class="spacer"></div>
+  </div>
+
+  <div id="recent-projects-container">
+      <div class="section-description" align="right">
+        <h5>Recent projects</h5>
+      </div>
+      
+  	  <div class="recent-summary">
+	      <div class="recent-item"> <a class="single_image" href="https://prasannajoshi.shinyapps.io/currency-exchange-rate-tracker2/"><img src="images/portfolio/thumbs/macd.png" width="250" height="150" alt="recent2" /></a>
+	      </div>
+  	  </div>
+
+      <!--END of recent projects-->  
+   </div>
+   <!--END of portfolio section-->
+</div>
+
+<div id="content">
+  <div id="recent-text">
+    <h2>These are some of my latest posts...</h2>
+    <div class="star-divider"></div>
+    <h5>You can check them out on my LinkedIn page</h5>
+    <div class="spacer"></div>
+  </div>
+
+   
+  <!--This is the START of the blog section-->
+<div id="blog">
+
+<!--This is the START of the recent posts-->
+      <!--END of recent posts-->
+    <div class="blog-item"> <a href="https://www.linkedin.com/pulse/measure-intangibles-structure-your-decisions-prasanna-joshi"><img class="single_image" src="images/blog/thumbs/decisions.jpg" width="280" height="180" alt="blog1" /></a>
+      <div class="blog-item-info">
+      </div>
+      <div class="blog-item-content"> <a href="blog-single.html">
+        <h5>Measure your intangibles, Structure your decisions!</h5>
+        </a>
+        <p>The doors we open and close each day decide the lives we live. ~ Flora Whittemore.
+        The quote beautifully sums up the role of decisions in our lives. Any activity we do is a result of our decision to not pursue any other activity that we could do.</p>
+                <a class="readmore" href="https://www.linkedin.com/pulse/measure-intangibles-structure-your-decisions-prasanna-joshi">read more →</a>   <br />
+      </div>
+    </div>
+    <div class="blog-item"> <a href="https://www.linkedin.com/pulse/hypothesis-testing-made-easy-prasanna-joshi"><img class="single_image" src="images/blog/thumbs/hypothesis.png" width="280" height="180" alt="blog2" /></a>
+      <div class="blog-item-content">
+        <!--div class="blog-item-info">
+          <div class="user">admin</div>
+          <div class="comments">6 comments</div>
+          <div class="tags">psd news blog post</div>
+        </div!-->
+        <a href="https://www.linkedin.com/pulse/hypothesis-testing-made-easy-prasanna-joshi">
+        <h5>Hypothesis Testing made easy!</h5>
+        </a>
+        <p>My friend Aaditya Bhat and I are attempting at expressing statistical concepts in simple terms. This post aims to explain statistical hypothesis testing.</p>
+        <a class="readmore" href="https://www.linkedin.com/pulse/hypothesis-testing-made-easy-prasanna-joshi">read more →</a> <br />
+      </div>
+    </div>
+    
+  <!--END of blog section-->
+</div>
+
+<div id="content">
+  <!--This is the START of the contact section-->
+  <div id="contact">
+    <h5 style="margin-top:10px;">Contact me</h5>
+    <p>Write me a note and I will get back to you shortly</p>
+    <form name="contact" action="scripts/contact.php" id="contactform" method="post">
+      <div class="boxes">
+        <h6>name<span class="required">*</span></h6>
+        <div class="box">
+          <input name="name" type="text" class="input" id="sender_name" />
+        </div>
+        <h6>email<span class="required">*</span></h6>
+        <div class="box">
+          <input name="email" type="text" class="input" id="sender_email" />
+        </div>
+        <h6>message</h6>
+        <div class="msgbox">
+          <textarea name="cf_message" rows="50" cols="20" class="message" id="cf_message"></textarea>
+        </div>
+        <div class="submitbtn">
+          <input type="submit" class="button btncolor" onClick="MM_validateForm('sender_name','','R');MM_validateForm('sender_email','','RisEmail');return document.MM_returnValue" value="Send Message" />
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+  <div id="contactinfo">
+    <h5>Location</h5>
+   	 	<p>Greater Boston Area</p>
+    	<br/>
+    	<h5>Contact info is:</h5>
+	    <p>E: joshi.pras@husky.neu.edu</p>
+	    <p>T: (617) 860 8612</p>
+	    <br/>
+    <div class="forrst"><a href="mailto:joshi.pras@husky.neu.edu" target="_top">joshi.pras@husky.neu.edu</a></div>
+    <div class="twitter_small"><a href="https://twitter.com/prasanna2">Follow on twitter</a></div>
+    </div>
+ <!--END of contact section-->
+
+
+<div class="spacer"></div>
+<p class = "text-muted"> Copyright Prasanna Joshi, 2017. All rights reserved.</p>   
+
+
+
 
 </body>
 
 </html>
 
-
-<!--This is the START of the NIVO slider-->
-	<!--div class="slider-wrapper theme-effe">
-		<div id="slider" class="nivoSlider"> 
-			<img src="images/slider/slide1.jpg" alt="" title="#img1" height = "420" width = "420"/> 
-			<a href="https://www.linkedin.com/pulse/measure-intangibles-structure-your-decisions-prasanna-joshi"><img src="images/slide2.jpg" alt="" title="#htmlcaption" /></a>    
-			<img src="images/slider/slide2.png" alt="" title="#img2" height = "420" width = "420"/>
-			<a href="https://www.linkedin.com/pulse/hypothesis-testing-made-easy-prasanna-joshi"><img src="images/slide2.jpg" alt="" title="#htmlcaption"/></a> 
-		</div>
-	</div>
