@@ -63,7 +63,7 @@ TEXT SELECTION STYLES
  color:#fff;
 }
 a {
-	color: #E095B4;
+	color: #0000EE;
 	outline: none;
 }
 /******************************************************************
@@ -71,54 +71,54 @@ General CSS
 ******************************************************************/
 									
 #content {
-	width: 1000px;
-	padding-top: 170px;
-	margin-left: 240px;
+	width: 800px;
+	padding-top: 100px;
+	margin-left: 230px;
 	z-index: 1;
 }
 p {
-	font-family: Verdana, Arial, sans-serif;
+	font-family: 'Open Sans';
 	line-height: 1.6em;
 	color: #848484;
 	font-size: 8pt;
 }
 h1 {
-	font-family: 'Droid Serif', Verdana, Arial, sans-serif;
+	font-family: 'Open Sans';
 	line-height: 1.6em;
 	color: #454544;
 	text-decoration: none;
 	font-size: 22pt;
 }
 h2 {
-	font-family: 'Droid Serif', Verdana, Arial, sans-serif;
+	font-family: 'Open Sans', Verdana, Arial, sans-serif;
 	line-height: 1.6em;
 	color: #454544;
 	text-decoration: none;
 	font-size: 18pt;
 }
 h3 {
-	font-family: 'Droid Serif', Verdana, Arial, sans-serif;
+	font-family: 'Open Sans', Verdana, Arial, sans-serif;
 	line-height: 1.6em;
 	color: #454544;
 	text-decoration: none;
 	font-size: 16pt;
 }
 h4 {
-	font-family: 'Droid Serif', Verdana, Arial, sans-serif;
+	font-family: 'Open Sans', Verdana, Arial, sans-serif;
 	line-height: 1.6em;
 	color: #454544;
 	text-decoration: none;
 	font-size: 14pt;
 }
 h5 {
-	font-family: 'Droid Serif', Verdana, Arial, sans-serif;
+	font-family: 'Open Sans', Verdana, Arial, sans-serif;
 	line-height: 1.6em;
 	color: #454544;
 	text-decoration: none;
 	font-size: 12pt;
 }
 h6 {
-	font-family: 'Droid Serif', Verdana, Arial, sans-serif;
+	font-family: 'Open Sans', Verdana, Arial, sans-serif;
 	line-height: 1.6em;
 	color: #454544;
 	text-decoration: none;
@@ -297,10 +297,10 @@ Header & Menu CSS
 ******************************************************************/
 
 #header-wrapper {
-	position: fixed;
+	float: left;
 	background-color: #FFF;
 	width: 100%;
-	height: 170px;
+	height: 200px;
 	top: 0px;
 	border-bottom: 1px;
 	border-bottom-style: solid;
@@ -309,8 +309,11 @@ Header & Menu CSS
 }
 #header {
 	width: 960px;
+	position: initial;
+
 }
 #logo {
+	position: fixed;
 	float: left;
 	width: 100px;
 	padding: 20px 0 10px 40px;
@@ -337,22 +340,23 @@ Header & Menu CSS
 	height: 22px;
 	position: fixed;
 	bottom: 40px;
-	left: 30px;
+	left: 40px;
 }
 #social-box li {
-	float: left;
-	padding-left: 6px;
+	float: center;
+	padding-left: 10px;
 	display: inline;
 }
 #menu-wrapper {
-	height: 100%;
-	padding-top: 120px;
+	height: 20%;
+	padding-top: 10px;
+	padding-left: 20px;
 	float: left;
 	width: 140px;
 }
 #main-menu {
 	position: fixed;
-	padding-top: 60px;
+	padding-top: 10px;
 	padding-left: 40px;
 	font-family: 'Droid Serif', Verdana, Arial, sans-serif;
 }
@@ -413,7 +417,7 @@ Header & Menu CSS
 	color: #444444;
 }
 #slide-panel {
-	position: fixed;
+	position: static;
 	top: 120px;
 	left: 240px;
 	height: 420px;
@@ -510,12 +514,12 @@ Home Page CSS
 ******************************************************************/
 
 #recent-posts-container {
-	width: 720px;
+	width: 800px;
 	height: 200px;
 	margin-top: 60px;
 }
 #recent-projects-container {
-	width: 720px;
+	width: 800px;
 	height: 200px;
 	margin-top: 60px;
 }
@@ -570,6 +574,19 @@ Home Page CSS
 #recent-text h5 {
 	padding-bottom: 0px;
 }
+#recent-projects-text {
+	text-align: center;
+}
+#recent-projects-text h5 {
+	padding-bottom: 0px;
+}
+#recent-blog-text {
+	text-align: center;
+}
+#recent-blog-text h5 {
+	padding-bottom: 0px;
+}
+
 .recent-gallery {
 	text-align: center;
 	margin-left: auto;
@@ -607,6 +624,12 @@ Home Page CSS
 	padding-top: 20px;
 	float: right;
 	padding-right: 170px;
+}
+#home {
+	width: 1000px;
+	padding-top: 170px;
+	margin-left: 240px;
+	z-index: 1;
 }
 /******************************************************************
 About us CSS
@@ -761,7 +784,7 @@ Blog CSS
 
 #blog {
 	display: block;
-	width: 720px;
+	width: 1000px;
 	margin-top: 10px;
 	margin-left: auto;
 	margin-right: auto;
@@ -775,13 +798,13 @@ Blog CSS
 }
 .blog-item {
 	clear: both;
-	width: 720px;
+	width: 800px;
 	height: 270px;
 }
 .blog-item-content {
 	width: 400px;
-	margin-top: 0px;
-	margin-left: 15px;
+	margin-top: 10px;
+	margin-left: 50px;
 	margin-bottom: 50px;
 	float: right;
 }
