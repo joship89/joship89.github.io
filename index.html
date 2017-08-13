@@ -8,6 +8,7 @@
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <!-- Load Fonts -->
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold,bolditalic" type="text/css" />
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold" type="text/css" />
 <!-- Load jQuery library -->
 <script type="text/javascript" src="scripts/jquery-1.6.2.min.js"></script>
@@ -49,61 +50,67 @@ function MM_validateForm() { //v4.0
 <!--This is the START of the header-->
 <div id="topcontrol" style="position: static; bottom: 5px; left: 960px; opacity: 1; cursor: pointer;" title="Go to Top"></div>
 <div id="header-wrapper">
-	<div id="header">
-		<div id="logo"> <a href="index.html"><img src="images/about/thumbs/me.png" width="140" height="150" alt="logo" align = "left" /></a> </div>
-		<div id="header-text">
-			<h2>Prasanna Purushottam Joshi</h2>
-			<h6><a href="index.html">Home</a></h6>
-		</div>
-	</div>
+  <div id="header">
+    <div id="logo"> <a href="index.html"><img src="images/about/thumbs/me.png" width="140" height="150" alt="logo" align = "left" /></a> </div>
+    <div id="header-text">
+      <h2>Prasanna Purushottam Joshi</h2>
+    </div>
+  </div>
+  <!--This is the START of the footer-->
+  <div id="footer">
+    <div id="social-box">
+      <ul>
+        <li>
+          <a href="https://www.linkedin.com/in/prasannajoshi1/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+        </li>
+        <li>
+          <a href="https://github.com/joship89"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/prasanna2"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!--END of footer--> 
+
 </div>
 <!--END of header-->
 <!--This is the START of the menu-->
 <div id="menu-wrapper">
-	<div id="main-menu">
-		<ul>
-			<li><a class="selected" href="index.html#content">Home →</a></li>
-			<li><a href="index.html#timeline">About</a></li>
-			<li><a href="index.html#recent-projects-container">Portfolio</a></li>
-			<li><a href="index.html#blog">Blog</a></li>
-			<li><a href="index.html#contactinfo">Contact</a></li>
-		</ul>
-	</div>
-	<!--This is the START of the footer-->
-	<div id="footer">
-		<div id="social-box">
-			<ul>
-				<li>
-					<div class="twitter"><a href="https://twitter.com/prasanna2"></a></div>
-				</li>
-				
-			</ul>
-		</div>
-		
-	</div>
-	<!--END of footer-->	
+  <div id="main-menu">
+    <ul>
+      <li><a href="index.html#content">Home</a></li>
+      <li><a href="index.html#timeline">About</a></li>
+      <li><a href="index.html#recent-projects-text">Portfolio</a></li>
+      <li><a href="index.html#recent-blog-text">Blog</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </div>
+
+ 
 </div>
 
 <!--END of menu-->
 <!--This is the START of the content-->
 <div id="content">
 <h2>Welcome!</h2> 
-                <p style="font-size:15px"> I am a mathematical optimization enthusiast with 5+ years of industrial experience in Data Science, Supply Chain Management and Lean Process Optimization. I completed my Master's in Operations Research from Northeastern University. Over the last 6 years I've worked in 6 different industries including manufacturing, automobile, investment research, pharmaceutical and data science.</p>
+                <h5 > I am a mathematical optimization enthusiast with 5+ years of industrial experience in Data Science, Supply Chain Management and Lean Process Optimization. I completed my Master's in Operations Research from Northeastern University. Over the last 6 years I've worked in 6 different industries including manufacturing, automobile, investment research, pharmaceutical and data science.</h5>
 
-                <p style="font-size:15px">Currently, I work as a Data Scientist with <a href="http://apptopia.com/" target="_blank">Apptopia</a></p>
+                <h5 >Currently, I work as a Data Scientist with <a href="http://apptopia.com/" target="_blank">Apptopia</a></h4>
 
 				<div class="spacer"></div>
 </div>
 <!--END of content-->
-<div id="timeline">  
-	  <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1lkJh-npDMudFwIz0aP-2mmjw3NhazK5lWZR4y2jKDNo&font=Default&lang=en&initial_zoom=0&height=450' width='80%' height='500' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0', align="right"></iframe>
+<div id="timeline" style="position:relative; margin-left: 7cm; margin-right: 7cm;">  
+	  <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1lkJh-npDMudFwIz0aP-2mmjw3NhazK5lWZR4y2jKDNo&font=Default&lang=en&initial_zoom=0&height=450' width='100%' height='700' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0', align="left" marginwidth="500" ></iframe>
 <!--END of content-->    
 </div>
 <div class="spacer"></div>
 
 <div id="content">
   <!--This is the START of the portfolio section-->
-  <div id="recent-text">
+  <div id="recent-projects-text">
       <h2>These are some of my latest projects</h2>
       <div class="star-divider"></div>
       <h5>You can check them out on my github page</h5>
@@ -126,7 +133,7 @@ function MM_validateForm() { //v4.0
 </div>
 
 <div id="content">
-  <div id="recent-text">
+  <div id="recent-blog-text">
     <h2>These are some of my latest posts...</h2>
     <div class="star-divider"></div>
     <h5>You can check them out on my LinkedIn page</h5>
@@ -145,8 +152,8 @@ function MM_validateForm() { //v4.0
       <div class="blog-item-content"> <a href="blog-single.html">
         <h5>Measure your intangibles, Structure your decisions!</h5>
         </a>
-        <p>The doors we open and close each day decide the lives we live. ~ Flora Whittemore.
-        The quote beautifully sums up the role of decisions in our lives. Any activity we do is a result of our decision to not pursue any other activity that we could do.</p>
+        <h6>The doors we open and close each day decide the lives we live. ~ Flora Whittemore.
+        The quote beautifully sums up the role of decisions in our lives. Any activity we do is a result of our decision to not pursue any other activity that we could do.</h6>
                 <a class="readmore" href="https://www.linkedin.com/pulse/measure-intangibles-structure-your-decisions-prasanna-joshi">read more →</a>   <br />
       </div>
     </div>
@@ -160,7 +167,7 @@ function MM_validateForm() { //v4.0
         <a href="https://www.linkedin.com/pulse/hypothesis-testing-made-easy-prasanna-joshi">
         <h5>Hypothesis Testing made easy!</h5>
         </a>
-        <p>My friend Aaditya Bhat and I are attempting at expressing statistical concepts in simple terms. This post aims to explain statistical hypothesis testing.</p>
+        <h6>My friend Aaditya Bhat and I are attempting at expressing statistical concepts in simple terms. This post aims to explain statistical hypothesis testing.</h6>
         <a class="readmore" href="https://www.linkedin.com/pulse/hypothesis-testing-made-easy-prasanna-joshi">read more →</a> <br />
       </div>
     </div>
@@ -168,7 +175,7 @@ function MM_validateForm() { //v4.0
   <!--END of blog section-->
 </div>
 
-<div id="content">
+<div style="display: inline-block;" id="content">
   <!--This is the START of the contact section-->
   <div id="contact">
     <h5 style="margin-top:10px;">Contact me</h5>
@@ -192,22 +199,24 @@ function MM_validateForm() { //v4.0
         </div>
       </div>
     </form>
-  </div>
-</div>
 
 
-  <div id="contactinfo">
+  <!--div style="display: inline-block;" id="contactinfo">
     <h5>Location</h5>
-   	 	<p>Greater Boston Area</p>
-    	<br/>
-    	<h5>Contact info is:</h5>
-	    <p>E: joshi.pras@husky.neu.edu</p>
-	    <p>T: (617) 860 8612</p>
-	    <br/>
+      <p>Greater Boston Area</p>
+      <br/>
+      <h5>Contact info is:</h5>
+      <p>E: joshi.pras@husky.neu.edu</p>
+      <p>T: (617) 860 8612</p>
+      <br/>
     <div class="forrst"><a href="mailto:joshi.pras@husky.neu.edu" target="_top">joshi.pras@husky.neu.edu</a></div>
     <div class="twitter_small"><a href="https://twitter.com/prasanna2">Follow on twitter</a></div>
-    </div>
+  </div>
  <!--END of contact section-->
+  </div>
+
+</div>
+
 
 
 <div class="spacer"></div>
